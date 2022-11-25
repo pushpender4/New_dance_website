@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class info</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        .main {
+            margin-bottom: -5px;
+            display: grid;
+            grid-template-areas: 'img1 img2'
+                'img1 img3';
+        }
+
+        #img1 {
+            grid-area: img1;
+        }
+
+        #img2 {
+            grid-area: img2;
+        }
+
+        #img3 {
+            grid-area: img3;
+        }
+
+        .img2 {
+            width: 500px;
+        }
+
+        .img3 {
+            margin-top: -5px;
+            width: 500px;
+            height: 342px;
+        }
+
+        .img4 {
+            display: none;
+        }
+
+        @media screen and (max-width: 1500px) {
+            .main {
+                margin-bottom: -5px;
+                display: grid;
+                grid-template-areas: 'img1 img2'
+                    'img4 img3';
+
+            }
+
+            #img1 {
+                grid-area: img1;
+            }
+
+            #img2 {
+                grid-area: img2;
+            }
+
+            #img3 {
+                grid-area: img3;
+            }
+
+            #img4 {
+                grid-area: img4;
+            }
+
+            .img4 {
+                display: block;
+            }
+
+            .img1 {
+                width: 100%;
+            }
+
+            .img2 {
+                width: 100%;
+            }
+
+            .img3 {
+                width: 100%;
+                height: auto;
+            }
+
+            .img4 {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <a href="/" style="text-decoration: none;"><div id="logo">
+                <img src="/static/img/logo.png">
+                HDA
+            </div></a>
+            <li> <a href="/"> Home </a></li>
+            <li> <a href="/about"> About </a></li>
+            <li> <a href="services"> Services </a></li>
+            <li> <a href="/classinfo"> Class Info </a></li>
+            <li> <a href="/contact"> Contact Us </a></li>
+        </ul>
+    </nav>
+
+
+    <div class="main">
+        <div id="img1"><img class="img1" src="../static/dance.jpg"></div>
+
+        <div id="img2"><img class="img2" src="../static/dinfo.jpg" alt=""></div>
+
+        <div id="img3"><img class="img3" src="../static/dinfo2.jpg" alt=""></div>
+
+        <div id="img4"><img class="img4" src="../static/dinfo3.jpg" alt=""></div>
+
+    </div>
+
+    <footer id="footer">
+        | Copyright © 2019 backend.com | All Rights Reserved
+    </footer>
+
+</body>
+
+</html>

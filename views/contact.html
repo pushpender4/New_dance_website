@@ -1,0 +1,282 @@
+<!-- //- extends base.pug
+
+
+//- //- if you want include scripts in pug
+//- //- block scripts
+//- //-   script(src='../static/index.js')
+//- //- ****indentation is most important 90% errors comes from wrong indentation 
+
+//- block style 
+//-     style
+//-        include ../static/style.css
+//-        include ../static/stylecontact.css
+
+//- block content 
+//-     div.container
+//-         h1 Contact Us
+//-         form(action= "/contact", method= "post", class= "myForm")
+//-             <input type="text"  class= "myInput" name="name"    placeholder="Enter your name..">
+//-             <input type="phone" class= "myInput" name="phone"   placeholder="Enter your phone no.">
+//-             <input type="email" class= "myInput" name="email"   placeholder="Enter your email id">
+//-             <input type="text"  class= "myInput" name="address" placeholder="Enter your Address">
+//-             <input type="text"  class= "myInput" name="desc"    placeholder="Enter your concern">
+//-             button(class="btn")
+//-                 | Submit -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /* background-color: rgba(71, 227, 255, 0.637); */
+            font-family: 'Baloo Bhai', cursive;
+            background-color: rgb(29, 24, 24);
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            background: url(../static/c.jpg) no-repeat center center/cover;
+            height: 400px;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            border-radius: 2px;
+            z-index: -1;
+            opacity: 0.8;
+            border-bottom-right-radius: 16px;
+        }
+
+        /* --------------------------form css----------------------------------- */
+        .container {
+            box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+            background: #f2f2f2;
+            border-radius: 5px;
+            margin: 150px auto;
+            padding: 10px 0px;
+            width: 35%;
+        }
+
+        h3 {
+            margin: 15px 10px;
+            font-size: 1.9rem;
+        }
+
+        .form-group input {
+            text-align: left;
+            display: block;
+            width: 400px;
+            height: 40px;
+            padding: 16px 0px;
+            border: 2px solid black;
+            margin: 15px auto;
+            font-size: 15px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .gen {
+            text-align: center;
+            margin: 10px auto;
+            width: 400px;
+        }
+
+        .container h3 {
+            text-align: center;
+            color: rgb(37, 6, 68);
+            font: weight 900px;
+        }
+
+        .container button {
+            display: block;
+            width: 44%;
+            margin: 5px auto;
+            font-size: 15px;
+        }
+
+        .btn {
+            font-family: 'Baloo Bhai', cursive;
+            margin: 0px 9px;
+            background-color: rgb(29, 181, 252);
+            color: white;
+            padding: 4px 14px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: rgb(31, 30, 30);
+        }
+
+        /*-------------------------- Media queries------------------------------------------ */
+        @media screen and (max-width:969px) {
+
+            .container::before {
+                top: 55px;
+            }
+        }
+
+        @media screen and (min-width:1149px) and (max-width:1299px) {
+
+            .container {
+                margin: 120px auto;
+                padding: 10px 0px;
+                width: 45%;
+            }
+        }
+
+        @media screen and (min-width:949px) and (max-width:1149px) {
+
+            .container {
+                margin: 100px auto;
+                padding: 10px 0px;
+                width: 55%;
+            }
+        }
+
+        @media screen and (min-width:749px) and (max-width:949px) {
+
+            .container {
+                margin: 120px auto;
+                padding: 10px 0px;
+                width: 65%;
+            }
+        }
+
+        @media screen and (min-width:599px) and (max-width:749px) {
+
+            .container {
+                margin: 90px auto;
+                padding: 10px 0px;
+                width: 75%;
+            }
+        }
+
+        @media screen and (min-width:499px) and (max-width:599px) {
+
+            .container {
+                margin: 120px auto;
+                padding: 10px 0px;
+                width: 80%;
+            }
+        }
+
+        @media screen and (min-width:399px) and (max-width:499px) {
+
+            .container {
+                margin: 80px auto;
+                padding: 10px 0px;
+                width: 90%;
+            }
+
+            .form-group input {
+                width: 300px;
+            }
+
+            .gen textarea {
+                width: 300px;
+            }
+
+            .hi {
+                display: block;
+            }
+
+            .gen {
+                width: 350px;
+            }
+        }
+
+        @media screen and (max-width:399px) {
+
+            .container {
+                margin: 120px auto;
+                padding: 10px 0px;
+                width: 95%;
+            }
+
+            .form-group input {
+                width: 190px;
+            }
+
+            .gen textarea {
+                width: 300px;
+            }
+
+            .hi {
+                display: block;
+            }
+
+            .gen {
+                width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar  ------------------------------------------>
+    <nav id="navbar">
+        <ul>
+            <a href="/" style="text-decoration: none;"><div id="logo">
+                <img src="/static/img/logo.png">
+                HDA
+            </div></a>
+            <li> <a href="/"> Home </a></li>
+            <li> <a href="/about"> About </a></li>
+            <li> <a href="services"> Services </a></li>
+            <li> <a href="/classinfo"> Class Info </a></li>
+            <li> <a href="/contact"> Contact Us </a></li>
+        </ul>
+    </nav>
+
+    <!-- navbar close -------------------------------------------------- -->
+
+    <div class="container">
+        <h3>Contact Us</h3>
+        <form action="/contact" method="post">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Enter your name.." required>
+            </div>
+
+            <div class="form-group">
+                <input type="number" name="phone" placeholder="Enter your phone no." required>
+            </div>
+
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Enter your email id" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="address" placeholder="Enter your Address">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="desc" placeholder="Enter your concern">
+            </div>
+
+            <div class="gen">
+                <label for="elgg">I'm not a robot&nbsp;&nbsp;&nbsp;</label>
+                <input type="checkbox" name="elgibility" id="elgg" required>
+            </div>
+
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+
+    <footer id="footer">
+        | Copyright © 2019 backend.com | All Rights Reserved
+    </footer>
+</body>
+
+</html>

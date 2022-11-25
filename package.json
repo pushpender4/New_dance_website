@@ -1,0 +1,22 @@
+{
+  "name": "pushpender-dance-academy",
+  "version": "1.0.0",
+  "description": "this is a website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "harrry",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "consolidate": "^0.16.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.6",
+    "mustache": "^4.2.0",
+    "nodemon": "^2.0.20",
+    "pug": "^3.0.2"
+  }
+}

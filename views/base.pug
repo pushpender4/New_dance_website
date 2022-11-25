@@ -1,0 +1,36 @@
+//- layout.pug
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content='Some description')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Rishu Dance Academy
+    block scripts
+    block style
+  body
+    nav#navbar
+        ul
+            div#logo
+                img(src="/static/img/logo.png")
+                | HDA
+            li #[a(href="/") Home]
+            li #[a(href="/about") About]
+            li #[a(href="/services") Services]
+            li #[a(href="/classinfo") Class Info]
+            li #[a(href="/contact") Contact Us]
+
+    block content
+    footer#footer
+        | Copyright © 2019 backend.com | All Rights Reserved
+
+
+//- this file is just for navbar and footer \
+//- reason behind to keep the seperate file is that we can extend this navbar and footer in many subpages like contact services aboutus etc 
+//- so we don't need to write extra html for subpages all we need to do is to extend base.pug which includes all the 
+//- navbar structure which will remain same on all pages
+
+//- example how to include this file into other subpages
+
+//- [extends base.pug]

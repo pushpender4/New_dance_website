@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        section::before {
+            content: "";
+            position: absolute;
+            background: url(../static/aboutus.jpg) no-repeat center center/cover;
+            height: 725px;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: -1;
+            /* opacity: 0.7; */
+            /* filter: blur(15px); */
+            filter: brightness(30%);
+        }
+
+        .hi {
+            color: white;
+            margin-top: 50px;
+            font-size: 3rem;
+            font-family: 'Alkalami', serif;
+        }
+
+        .hlo {
+            color: white;
+            margin-top: 20px;
+            font-family: 'Alkalami', serif;
+        }
+
+        .center {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* flex-wrap: wrap; */
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            flex-direction: column;
+            font-size: 1.6rem;
+            font-family: 'Baloo 2', cursive;
+        }
+
+        .center p {
+            color: white;
+            font-weight: bold;
+            line-height: 2.5rem;
+            text-align: center;
+        }
+
+        button {
+            width: 220px;
+            height: 50px;
+            margin: 15px;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 16px;
+            outline: none;
+            border: 1px white;
+        }
+
+        .b12 {
+            background-color: #f2b433;
+            color: white;
+        }
+
+        .b13 {
+            background-color: #3359f2;
+            color: white;
+        }
+
+
+        @media screen and (max-width:1280px) {
+            .center {
+                flex-wrap: wrap;
+            }
+
+            section::before {
+                height: 1025px;
+            }
+        }
+
+        @media screen and (max-width:950px) {
+            .center {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media screen and (max-width:762px) {
+            section::before {
+                height: 1450px;
+            }
+        }
+
+        @media screen and (max-width:650px) {
+            .center {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media screen and (max-width:412px) {
+            section::before {
+                height: 1487px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <a href="/" style="text-decoration: none;"><div id="logo">
+                <img src="/static/img/logo.png">
+                 HDA
+            </div></a>
+            <li> <a href="/"> Home </a></li>
+            <li> <a href="/about"> About </a></li>
+            <li> <a href="services"> Services </a></li>
+            <li> <a href="/classinfo"> Class Info </a></li>
+            <li> <a href="/contact"> Contact Us </a></li>
+        </ul>
+    </nav>
+
+
+    <h1 class="hi"><i class="fa-solid fa-circle-play fa-1x"></i>Thousands of Online Dance Lessons</h1>
+    <h2 class="hlo"><i class="fa-sharp fa-solid fa-graduation-cap fa-1x"></i>Top-Notch Dance Instructors</h2>
+
+
+    <section class="mid">
+        <div class="center">
+            <div class="box b1">
+                <p>
+                    New around here?
+                    Here's run down of how
+                    Dance.net works</p>
+                <button class="b11"><i class="fa-sharp fa-solid fa-key"></i> &nbsp;How it Works</button>
+
+            </div>
+            <div class="box b2">
+
+                <p> Registration is free!
+                    Has perks and takes
+                    about 20 seconds</p>
+                <button class="b12"><i class="fa-solid fa-right-to-bracket"></i>&nbsp; Sign-Up now.</button>
+            </div>
+
+            <div class="box b3">
+
+                <p> Full online access
+                    to all dance Lessons
+                    starting at $5.00</p>
+                <button class="b13"><i class="fa-solid fa-cart-shopping"></i>&nbsp; Subscriptions</button>
+            </div>
+
+            <div class="box b4">
+
+                <p> Search lessons and
+                    purchase individually
+                    starting at $1.99</p>
+                <button class="b14"> <i class="fa-solid fa-magnifying-glass"></i> &nbsp; Search Lessons</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="footer">
+        | Copyright © 2019 backend.com | All Rights Reserved
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        .home::before {
+            content: "";
+            position: absolute;
+            background: url(../static/ser.jpg) no-repeat center center/cover;
+            height: 750px;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: -1;
+            filter: brightness(50%);
+        }
+
+        .hi {
+            margin-top: 80px;
+            margin-bottom: 20px;
+            color: white;
+            margin-left: 70px;
+            font-size: 4rem;
+            text-align: left;
+            font-family: 'Alkalami', serif;
+        }
+
+        hr {
+            width: 25%;
+            margin-left: 70px;
+            height: 8px;
+            background-color: white;
+            margin-bottom: 30px;
+            border-radius: 40%;
+        }
+
+        .home p {
+            width: 28%;
+            font-size: 17px;
+            color: white;
+            margin-left: 70px;
+            line-height: 1.6rem;
+            font-family: 'Baloo 2', cursive;
+        }
+
+        .btn {
+            margin-top: 30px;
+            margin-left: 70px;
+            border-radius: 50px;
+            padding: 12px;
+            font-weight: 500;
+            background-color: transparent;
+            color: white;
+            border: 3px solid white;
+            border-width: 2px;
+            letter-spacing: 2px;
+            font-size: 1.3rem;
+            width: 180px;
+            text-transform: capitalize;
+        }
+
+        .boxes {
+            margin-top: 40px;
+            margin-bottom: 20ox;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 220px;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            flex-direction: column;
+            font-size: 1.6rem;
+            font-family: 'Baloo 2', cursive;
+            border: 2px solid green;
+            border-radius: 10px;
+        }
+
+        img {
+            height: 90px;
+        }
+
+        /* --------------------------------------------------media queries----------------------------------------------------- */
+
+        @media screen and (max-width:1115px) {
+            .hi {
+                margin-top: 60px;
+                margin-bottom: 15px;
+                font-size: 3.5rem;
+            }
+
+            hr {
+                height: 6px;
+                background-color: white;
+            }
+
+            .home p {
+                font-size: 16px;
+                line-height: 1.5rem;
+                width: 45%;
+            }
+
+            .btn {
+                padding: 10px;
+                letter-spacing: 1.8px;
+                font-size: 1.2rem;
+                width: 170px;
+            }
+        }
+
+        @media screen and (max-width:900px) {
+            .hi {
+                margin-top: 55px;
+                margin-left: 50px;
+                margin-bottom: 13px;
+                font-size: 3rem;
+            }
+
+            hr {
+                margin-left: 50px;
+            }
+
+            .home p {
+                font-size: 15px;
+                margin-left: 50px;
+                line-height: 1.4rem;
+                width: 50%;
+            }
+
+            .btn {
+                padding: 8px;
+                margin-left: 50px;
+                letter-spacing: 1.6px;
+                font-size: 1.1rem;
+                width: 150px;
+            }
+        }
+
+        @media screen and (max-width:700px) {
+            .hi {
+                margin-top: 45px;
+                margin-left: 40px;
+                margin-bottom: 11px;
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+            }
+
+            hr {
+                margin-left: 40px;
+                width: 35%;
+            }
+
+            .home p {
+                font-size: 14px;
+                margin-left: 40px;
+                line-height: 1.3rem;
+                width: 60%;
+            }
+
+            .btn {
+                padding: 6px;
+                margin-left: 40px;
+                letter-spacing: 1.4px;
+                font-size: 1rem;
+                width: 140px;
+            }
+
+            .boxes {
+                flex-wrap: wrap;
+            }
+
+            .home::before {
+                height: 950px;
+            }
+        }
+
+        @media screen and (max-width:640px) {
+            .home::before {
+                height: 1342px;
+            }
+        }
+
+        @media screen and (max-width:575px) {
+            .hi {
+                margin-top: 40px;
+                margin-left: 35px;
+                margin-bottom: 10px;
+                font-size: 2.4rem;
+                letter-spacing: 1.8px;
+            }
+
+            hr {
+                margin-left: 35px;
+                width: 50%;
+            }
+
+            .home p {
+                margin-left: 35px;
+                line-height: 1.3rem;
+                width: 70%;
+            }
+
+            .btn {
+                padding: 6px;
+                margin-left: 35px;
+                letter-spacing: 1.4px;
+                font-size: 0.9rem;
+                width: 140px;
+            }
+        }
+
+        @media screen and (max-width:435px) {
+            hr {
+                width: 58%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <a href="/" style="text-decoration: none;"><div id="logo">
+                <img src="/static/img/logo.png">
+                 HDA
+            </div></a>
+            <li> <a href="/"> Home </a></li>
+            <li> <a href="/about"> About </a></li>
+            <li> <a href="services"> Services </a></li>
+            <li> <a href="/classinfo"> Class Info </a></li>
+            <li> <a href="/contact"> Contact Us </a></li>
+        </ul>
+    </nav>
+
+
+    <h1 class="hi">Dance Studio</h1>
+    <hr>
+    <div class="home">
+        <p>This website tools make your online learning experience just like a class at a physical studio – but better !
+        </p>
+        <button class="btn">learn more</button>
+    </div>
+
+    <div class="boxes">
+        <div class="box">
+            <div class="img"><img src="../static/d1.png" alt=""></div>
+            DANCE
+        </div>
+        <div class="box">
+            <div class="img"><img src="../static/d2.png" alt=""></div>
+            YOGA
+        </div>
+        <div class="box">
+            <div class="img"><img src="../static/d3.png" alt=""></div>
+            FITNESS
+        </div>
+        <div class="box">
+            <div class="img"><img src="../static/d4.png" alt=""></div>
+            GYM
+        </div>
+    </div>
+
+    <footer id="footer">
+        | Copyright © 2019 backend.com | All Rights Reserved
+    </footer>
+
+</body>
+
+</html>
